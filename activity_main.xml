@@ -2,69 +2,82 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/History app"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#12635C"
+    android:background="@drawable/download"
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/txtAgeNumber"
         android:layout_width="229dp"
         android:layout_height="73dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="72dp"
         android:backgroundTint="@color/white"
         android:ems="10"
-        android:inputType="text"
-        android:text="Enter Age"
+        android:inputType="number"
         android:textColor="#ECE9E9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnGenerate"
         android:layout_width="180dp"
         android:layout_height="52dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="192dp"
-        android:text="Generate History"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/generate_history"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+
+        app:layout_constraintTop_toBottomOf="@+id/txtAgeNumber" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnCancel"
         android:layout_width="101dp"
         android:layout_height="50dp"
-        android:layout_marginTop="196dp"
-        android:text="Clear"
-        android:textColorHighlight="#801C1C"
-        android:textColorLink="#CA4343"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5"
-        tools:layout_editor_absoluteX="264dp" />
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/cancel"
+        android:textColorHighlight="#FAF9F9"
+        android:textColorLink="#EAEAEA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAgeNumber" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="204dp"
         android:layout_height="81dp"
-        android:text="My History App"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/my_history_app"
         android:textColor="#F4EAEA"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="38dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
     <EditText
-        android:id="@+id/editTextText7"
-        android:layout_width="216dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="76dp"
+        android:id="@+id/txtResult"
+        android:layout_width="229dp"
+        android:layout_height="243dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="text"
         android:text="See Results"
         android:textColor="#FAF1F1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnGenerate" />
+
+    <TextView
+        android:id="@+id/Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="104dp"
+        android:text="Age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
